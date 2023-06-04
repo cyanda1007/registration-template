@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html regg="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/registration_number.css">
+    <title>Document</title>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.7/handlebars.min.js"></script>
+    <script type="text/x-template" class="plateRegTemplate">
+        {{#each plate}}
+        <button id="{{@index}}" type="submit">
+            {{regNum}}
+        </button>
+        {{/each}}
+    </script>
+</head>
+
+<body>
+    <div class="row">
+        <div class="col-md-6">
+            <div class="all">
+                <div class="reg">
+                    <h1>Registration Number!</h1>
+                    <div class="err">
+                        <span class="errorMessage"></span>
+                    </div>
+                    <div>
+                        <label class="Reg">
+                            <input type="text" value="" name="" required class="regTextHolder"
+                                placeholder="registration format! e.g. CA 123456 CL 123-123 CY 123 456">
+                            <button class="regBtn">ADD</button>
+                        </label>
+                    </div>
+                </div>
+                <div class="container">
+                    <label for="" class="">
+                        <input type="radio" name="registrationRadio" class="reggRadio" value="CA">
+                        <span class="reggText">Cape Town</span>
+                    </label>
+                    <label for="" class="">
+                        <input type="radio" name="registrationRadio" class="reggRadio" value="CY">
+                        <span class="reggText">Bellville</span>
+                    </label>
+                    <label for="" class="">
+                        <input type="radio" name="registrationRadio" class="reggRadio" value="CJ">
+                        <span class="reggText">Paarl</span>
+                    </label>
+                    <label for="" class="">
+                        <input type="radio" name="registrationRadio" class="reggRadio" value="CL">
+                        <span class="reggText">Stellenbosh</span>
+                    </label>
+                </div>
+                <div class="container1">
+                    <button class="displayButton">Display All</button>
+                    <button class="displayByTown">Display By Town</button>
+                    <button class="resetButton">Reset</button>
+                </div>
+                <div>
+                    <h3><span class="regPlate">
+                        </span></h3>
+                </div>
+
+                <div>
+                    <h3><span class="errors">
+                        </span></h3>
+                </div>
+
+                <div>
+                    <h3>
+                        <!-- <a href="./Names/index.html">Greeting</a>  -->
+                        <a href="./mocha/mocha.html">Unit-testing</a>
+                    </h3>
+                </div>
+                <p>
+                    &nbsp;
+                </p>
+                <div id="regNumDisplay">
+
+                </div>
+            </div>
+        </div>
+        <!-- Template-->
+        <div class="col-md-6">
+            <div class="all">
+                <div class="reg">
+                    <h1>Registration Number!</h1>
+                    <div class="err">
+                        <span class="errorMessageTemp"></span>
+                    </div>
+                    <div>
+                        <label class="Reg">
+                            <input type="text" value="" name="" required class="regTextHolderTemp"
+                                placeholder="registration format! e.g. CA 123456 CL 123-123 CY 123 456">
+                            <button class="regBtnTemp">ADD</button>
+                        </label>
+                    </div>
+                </div>
+                <div class="containerTemp">
+                    <label for="registrationRadioTempCA" class="">
+                        <input type="radio" name="registrationRadioTemp" class="reggRadio" value="CA">
+                        <span class="reggText">Cape Town</span>
+                    </label>
+                    <label for="registrationRadioTempCY" class="">
+                        <input type="radio" name="registrationRadioTemp" class="reggRadio" value="CY">
+                        <span class="reggText">Bellville</span>
+                    </label>
+                    <label for="registrationRadioTempCJ" class="">
+                        <input type="radio" name="registrationRadioTemp" class="reggRadio" value="CJ">
+                        <span class="reggText">Paarl</span>
+                    </label>
+                    <label for="CL" class="">
+                        <input type="radio" name="registrationRadioTemp" class="reggRadio" value="CL">
+                        <span class="reggText">Stellenbosh</span>
+                    </label>
+                </div>
+                <div class="container1Temp">
+                    <button class="displayButtonTemp">Display All</button>
+                    <button class="displayByTownTemp">Display By Town</button>
+                    <button class="resetButtonTemp">Reset</button>
+                </div>
+                <div>
+                    <h3><span class="regPlate">
+                        </span></h3>
+                </div>
+                <fieldset>
+                    <div id="templateDisplay">
+
+                    </div>
+                </fieldset>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="./functions/regfunc.js"></script>
+<script src="./functions/reg.js"></script>
+<script src="./functions/temp.js"></script>
+
+</html>
